@@ -4,43 +4,38 @@
 using namespace std;
 
 class Account {
-    float balance;
+    double balance;
 //Constructors
     public:
     Account() {
         balance = 0;
     }
 
-    Account(int balance) {
+    Account(double balance) {
         this -> balance = balance;
     }
 //This function deposits money into an account
-    int deposit(int amount) {
+    void deposit(double amount) {
         balance += amount;
-        return 0;
     }
 //This function withdraws money from an account
-    int withdraw(int amount) {
+    void withdraw(double amount) {
         if (amount <= balance) {
             balance -= amount;
-            return 0;
         }
 
         else if ((amount > balance) && (balance > 5)) {
             balance -= 5;
-            return 0; 
         }
         
-        return 0;
     }
 //This function returns a balance fo an account
-    float get_balance() {
+double get_balance() {
         return balance;
     }
 //This function calculates interests for a balance
-    int add_interest(float rate) {
+    void add_interest(float rate) {
         balance *= (1 + rate / 100);
-        return 0;
     }
 };
 

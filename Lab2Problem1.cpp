@@ -5,7 +5,7 @@ using namespace std;
 
 class Account {
 float balance;
-
+//Constructors
     public:
     Account() {
         balance = 0;
@@ -14,12 +14,12 @@ float balance;
     Account(int balance) {
         this -> balance = balance;
     }
-
+//This function deposits money into an account
     int deposit(int amount) {
         balance += amount;
         return 0;
     }
-
+//This function withdraws money from an account
     int withdraw(int amount) {
         if (amount <= balance) {
             balance -= amount;
@@ -33,7 +33,7 @@ float balance;
         
         return 0;
     }
-
+//This function returns a balance fo an account
     int get_balance() {
         return balance;
     }
